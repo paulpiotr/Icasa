@@ -23,7 +23,7 @@ namespace IcasaMutationServiceData
                 mutationServiceClient.CloseAsync();
                 Console.WriteLine("End");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(string.Format("{0}, {1}", e.Message, e.StackTrace));
                 _log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
