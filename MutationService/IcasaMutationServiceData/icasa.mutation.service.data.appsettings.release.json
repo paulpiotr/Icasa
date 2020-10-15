@@ -1,0 +1,5 @@
+{
+  "EndpointAddress": "https://soap.icasa-group.com/MutationServiceIcasa2.svc/Soap",
+  "MutationServiceClientCredentialsUserName": "pu1001s",
+  "MutationServiceClientCredentialsPassword": "n4QaUtM"
+}

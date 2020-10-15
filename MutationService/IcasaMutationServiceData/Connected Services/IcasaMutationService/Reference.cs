@@ -18,9 +18,9 @@ namespace IcasaMutationService
     public partial class DebtorIn : object
     {
         
-        private System.Collections.Generic.List<IcasaMutationService.CardHolderIn> CardHoldersField;
+        private IcasaMutationService.CardHolderIn[] CardHoldersField;
         
-        private System.Collections.Generic.List<IcasaMutationService.CardIn> CardsWithoutCardholderField;
+        private IcasaMutationService.CardIn[] CardsWithoutCardholderField;
         
         private string CityField;
         
@@ -83,7 +83,7 @@ namespace IcasaMutationService
         private System.Nullable<ushort> WeeklyTransactionsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.CardHolderIn> CardHolders
+        public IcasaMutationService.CardHolderIn[] CardHolders
         {
             get
             {
@@ -96,7 +96,7 @@ namespace IcasaMutationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.CardIn> CardsWithoutCardholder
+        public IcasaMutationService.CardIn[] CardsWithoutCardholder
         {
             get
             {
@@ -507,7 +507,7 @@ namespace IcasaMutationService
         
         private bool AnonymousField;
         
-        private System.Collections.Generic.List<IcasaMutationService.CardIn> CardsField;
+        private IcasaMutationService.CardIn[] CardsField;
         
         private string CityField;
         
@@ -565,7 +565,7 @@ namespace IcasaMutationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.CardIn> Cards
+        public IcasaMutationService.CardIn[] Cards
         {
             get
             {
@@ -895,7 +895,7 @@ namespace IcasaMutationService
         
         private bool LoyaltyField;
         
-        private System.Collections.Generic.List<int> ProductSetsField;
+        private int[] ProductSetsField;
         
         private byte RequestAdditionalInputField;
         
@@ -1159,7 +1159,7 @@ namespace IcasaMutationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
-        public System.Collections.Generic.List<int> ProductSets
+        public int[] ProductSets
         {
             get
             {
@@ -1477,10 +1477,10 @@ namespace IcasaMutationService
     public partial class DebtorRequestResult : IcasaMutationService.OperationResult
     {
         
-        private System.Collections.Generic.List<IcasaMutationService.DebtorOut> DataField;
+        private IcasaMutationService.DebtorOut[] DataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.DebtorOut> Data
+        public IcasaMutationService.DebtorOut[] Data
         {
             get
             {
@@ -1499,10 +1499,10 @@ namespace IcasaMutationService
     public partial class CardHolderRequestResult : IcasaMutationService.OperationResult
     {
         
-        private System.Collections.Generic.List<IcasaMutationService.CardHolderOut> DataField;
+        private IcasaMutationService.CardHolderOut[] DataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.CardHolderOut> Data
+        public IcasaMutationService.CardHolderOut[] Data
         {
             get
             {
@@ -1521,10 +1521,10 @@ namespace IcasaMutationService
     public partial class CardRequestResult : IcasaMutationService.OperationResult
     {
         
-        private System.Collections.Generic.List<IcasaMutationService.CardOut> DataField;
+        private IcasaMutationService.CardOut[] DataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.CardOut> Data
+        public IcasaMutationService.CardOut[] Data
         {
             get
             {
@@ -1543,10 +1543,10 @@ namespace IcasaMutationService
     public partial class StoreRequestResult : IcasaMutationService.OperationResult
     {
         
-        private System.Collections.Generic.List<IcasaMutationService.StoreOut> DataField;
+        private IcasaMutationService.StoreOut[] DataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.StoreOut> Data
+        public IcasaMutationService.StoreOut[] Data
         {
             get
             {
@@ -1565,10 +1565,10 @@ namespace IcasaMutationService
     public partial class TerminalRequestResult : IcasaMutationService.OperationResult
     {
         
-        private System.Collections.Generic.List<IcasaMutationService.TerminalOut> DataField;
+        private IcasaMutationService.TerminalOut[] DataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.TerminalOut> Data
+        public IcasaMutationService.TerminalOut[] Data
         {
             get
             {
@@ -1587,10 +1587,10 @@ namespace IcasaMutationService
     public partial class CompanyRequestResult : IcasaMutationService.OperationResult
     {
         
-        private System.Collections.Generic.List<IcasaMutationService.CompanyOut> DataField;
+        private IcasaMutationService.CompanyOut[] DataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.CompanyOut> Data
+        public IcasaMutationService.CompanyOut[] Data
         {
             get
             {
@@ -1609,10 +1609,10 @@ namespace IcasaMutationService
     public partial class CardIssuerRequestResult : IcasaMutationService.OperationResult
     {
         
-        private System.Collections.Generic.List<IcasaMutationService.CardIssuerOut> DataField;
+        private IcasaMutationService.CardIssuerOut[] DataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.CardIssuerOut> Data
+        public IcasaMutationService.CardIssuerOut[] Data
         {
             get
             {
@@ -1631,10 +1631,10 @@ namespace IcasaMutationService
     public partial class EmployeeRequestResult : IcasaMutationService.OperationResult
     {
         
-        private System.Collections.Generic.List<IcasaMutationService.EmployeeOut> DataField;
+        private IcasaMutationService.EmployeeOut[] DataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.EmployeeOut> Data
+        public IcasaMutationService.EmployeeOut[] Data
         {
             get
             {
@@ -1653,10 +1653,10 @@ namespace IcasaMutationService
     public partial class ProductSetRequestResult : IcasaMutationService.OperationResult
     {
         
-        private System.Collections.Generic.List<IcasaMutationService.ProductSetOut> DataField;
+        private IcasaMutationService.ProductSetOut[] DataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.ProductSetOut> Data
+        public IcasaMutationService.ProductSetOut[] Data
         {
             get
             {
@@ -1675,10 +1675,10 @@ namespace IcasaMutationService
     public partial class CreditLimitSetRequestResult : IcasaMutationService.OperationResult
     {
         
-        private System.Collections.Generic.List<IcasaMutationService.CreditLimitSetOut> DataField;
+        private IcasaMutationService.CreditLimitSetOut[] DataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.CreditLimitSetOut> Data
+        public IcasaMutationService.CreditLimitSetOut[] Data
         {
             get
             {
@@ -1697,10 +1697,10 @@ namespace IcasaMutationService
     public partial class StoreClusterRequestResult : IcasaMutationService.OperationResult
     {
         
-        private System.Collections.Generic.List<IcasaMutationService.StoreClusterOut> DataField;
+        private IcasaMutationService.StoreClusterOut[] DataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.StoreClusterOut> Data
+        public IcasaMutationService.StoreClusterOut[] Data
         {
             get
             {
@@ -1719,10 +1719,10 @@ namespace IcasaMutationService
     public partial class CardLayoutRequestResult : IcasaMutationService.OperationResult
     {
         
-        private System.Collections.Generic.List<IcasaMutationService.CardLayoutOut> DataField;
+        private IcasaMutationService.CardLayoutOut[] DataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.CardLayoutOut> Data
+        public IcasaMutationService.CardLayoutOut[] Data
         {
             get
             {
@@ -1741,18 +1741,18 @@ namespace IcasaMutationService
     public partial class GeneralDataRequestResult : IcasaMutationService.OperationResult
     {
         
-        private System.Collections.Generic.List<IcasaMutationService.CardHolderOut> ChangedCardHoldersField;
+        private IcasaMutationService.CardHolderOut[] ChangedCardHoldersField;
         
-        private System.Collections.Generic.List<IcasaMutationService.CardOut> ChangedCardsField;
+        private IcasaMutationService.CardOut[] ChangedCardsField;
         
-        private System.Collections.Generic.List<IcasaMutationService.CompanyOut> ChangedCompaniesField;
+        private IcasaMutationService.CompanyOut[] ChangedCompaniesField;
         
-        private System.Collections.Generic.List<IcasaMutationService.DebtorOut> ChangedDebtorsField;
+        private IcasaMutationService.DebtorOut[] ChangedDebtorsField;
         
-        private System.Collections.Generic.List<IcasaMutationService.StoreOut> ChangedStoresField;
+        private IcasaMutationService.StoreOut[] ChangedStoresField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.CardHolderOut> ChangedCardHolders
+        public IcasaMutationService.CardHolderOut[] ChangedCardHolders
         {
             get
             {
@@ -1765,7 +1765,7 @@ namespace IcasaMutationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.CardOut> ChangedCards
+        public IcasaMutationService.CardOut[] ChangedCards
         {
             get
             {
@@ -1778,7 +1778,7 @@ namespace IcasaMutationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.CompanyOut> ChangedCompanies
+        public IcasaMutationService.CompanyOut[] ChangedCompanies
         {
             get
             {
@@ -1791,7 +1791,7 @@ namespace IcasaMutationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.DebtorOut> ChangedDebtors
+        public IcasaMutationService.DebtorOut[] ChangedDebtors
         {
             get
             {
@@ -1804,7 +1804,7 @@ namespace IcasaMutationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.StoreOut> ChangedStores
+        public IcasaMutationService.StoreOut[] ChangedStores
         {
             get
             {
@@ -1860,14 +1860,14 @@ namespace IcasaMutationService
     public partial class AddItemsResult : IcasaMutationService.OperationResult
     {
         
-        private System.Collections.Generic.List<string> RecordsFailedField;
+        private string[] RecordsFailedField;
         
-        private System.Collections.Generic.List<string> RecordsSucceededField;
+        private string[] RecordsSucceededField;
         
-        private System.Collections.Generic.List<IcasaMutationService.OperationResult> ValidationErrorsField;
+        private IcasaMutationService.OperationResult[] ValidationErrorsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<string> RecordsFailed
+        public string[] RecordsFailed
         {
             get
             {
@@ -1880,7 +1880,7 @@ namespace IcasaMutationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<string> RecordsSucceeded
+        public string[] RecordsSucceeded
         {
             get
             {
@@ -1893,7 +1893,7 @@ namespace IcasaMutationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.OperationResult> ValidationErrors
+        public IcasaMutationService.OperationResult[] ValidationErrors
         {
             get
             {
@@ -2034,7 +2034,7 @@ namespace IcasaMutationService
         
         private bool ActiveField;
         
-        private System.Collections.Generic.List<IcasaMutationService.CardHolderOut> CardHoldersField;
+        private IcasaMutationService.CardHolderOut[] CardHoldersField;
         
         private string CityField;
         
@@ -2118,7 +2118,7 @@ namespace IcasaMutationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.CardHolderOut> CardHolders
+        public IcasaMutationService.CardHolderOut[] CardHolders
         {
             get
             {
@@ -2583,7 +2583,7 @@ namespace IcasaMutationService
         
         private bool AnonymousField;
         
-        private System.Collections.Generic.List<IcasaMutationService.CardOut> CardsField;
+        private IcasaMutationService.CardOut[] CardsField;
         
         private string CityField;
         
@@ -2666,7 +2666,7 @@ namespace IcasaMutationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.CardOut> Cards
+        public IcasaMutationService.CardOut[] Cards
         {
             get
             {
@@ -3088,7 +3088,7 @@ namespace IcasaMutationService
         
         private System.Nullable<decimal> PrepaidValueField;
         
-        private System.Collections.Generic.List<int> ProductSetsField;
+        private int[] ProductSetsField;
         
         private byte RequestAdditionalInputField;
         
@@ -3441,7 +3441,7 @@ namespace IcasaMutationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<int> ProductSets
+        public int[] ProductSets
         {
             get
             {
@@ -3564,7 +3564,7 @@ namespace IcasaMutationService
         
         private string DealerCodeField;
         
-        private System.Collections.Generic.List<IcasaMutationService.StoreOut.DynamicField> DynamicFieldsField;
+        private IcasaMutationService.StoreOut.DynamicField[] DynamicFieldsField;
         
         private string EditedByField;
         
@@ -3760,7 +3760,7 @@ namespace IcasaMutationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<IcasaMutationService.StoreOut.DynamicField> DynamicFields
+        public IcasaMutationService.StoreOut.DynamicField[] DynamicFields
         {
             get
             {
@@ -5807,7 +5807,7 @@ namespace IcasaMutationService
         
         private System.Nullable<bool> LoyaltyField;
         
-        private System.Collections.Generic.List<int> ProductSetsField;
+        private int[] ProductSetsField;
         
         private System.Nullable<int> StoreClusterIdField;
         
@@ -5998,7 +5998,7 @@ namespace IcasaMutationService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<int> ProductSets
+        public int[] ProductSets
         {
             get
             {
@@ -7548,89 +7548,182 @@ namespace IcasaMutationService
     public interface IMutationService
     {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetVersion", ReplyAction="http://ICASA.WebServices/IMutationService/GetVersionResponse")]
+        //[System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetVersion", ReplyAction="http://ICASA.WebServices/IMutationService/GetVersionResponse")]
+        //string GetVersion();
+        
+        //[System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetVersion", ReplyAction="http://ICASA.WebServices/IMutationService/GetVersionResponse")]
+        //System.Threading.Tasks.Task<string> GetVersionAsync();
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://ICASA.WebServices/IMutationService/GetVersion", ReplyAction = "http://ICASA.WebServices/IMutationService/GetVersionResponse")]
+        string GetVersion();
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://ICASA.WebServices/IMutationService/GetVersion", ReplyAction = "http://ICASA.WebServices/IMutationService/GetVersionResponse")]
         System.Threading.Tasks.Task<string> GetVersionAsync();
+
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/AddDebtors", ReplyAction="http://ICASA.WebServices/IMutationService/AddDebtorsResponse")]
+        IcasaMutationService.AddItemsResult AddDebtors(IcasaMutationService.DebtorIn[] NewDebtors);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/AddDebtors", ReplyAction="http://ICASA.WebServices/IMutationService/AddDebtorsResponse")]
-        System.Threading.Tasks.Task<IcasaMutationService.AddItemsResult> AddDebtorsAsync(System.Collections.Generic.List<IcasaMutationService.DebtorIn> NewDebtors);
+        System.Threading.Tasks.Task<IcasaMutationService.AddItemsResult> AddDebtorsAsync(IcasaMutationService.DebtorIn[] NewDebtors);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/AddCardHolders", ReplyAction="http://ICASA.WebServices/IMutationService/AddCardHoldersResponse")]
-        System.Threading.Tasks.Task<IcasaMutationService.AddItemsResult> AddCardHoldersAsync(System.Collections.Generic.List<IcasaMutationService.CardHolderIn> NewCardHolders, string DebtorExternalID);
+        IcasaMutationService.AddItemsResult AddCardHolders(IcasaMutationService.CardHolderIn[] NewCardHolders, string DebtorExternalID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/AddCardHolders", ReplyAction="http://ICASA.WebServices/IMutationService/AddCardHoldersResponse")]
+        System.Threading.Tasks.Task<IcasaMutationService.AddItemsResult> AddCardHoldersAsync(IcasaMutationService.CardHolderIn[] NewCardHolders, string DebtorExternalID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/AddCards", ReplyAction="http://ICASA.WebServices/IMutationService/AddCardsResponse")]
-        System.Threading.Tasks.Task<IcasaMutationService.OperationResult> AddCardsAsync(System.Collections.Generic.List<IcasaMutationService.CardIn> NewCards, string CardHolderExternalID, int CardHolderInternalID);
+        IcasaMutationService.OperationResult AddCards(IcasaMutationService.CardIn[] NewCards, string CardHolderExternalID, int CardHolderInternalID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/AddCards", ReplyAction="http://ICASA.WebServices/IMutationService/AddCardsResponse")]
+        System.Threading.Tasks.Task<IcasaMutationService.OperationResult> AddCardsAsync(IcasaMutationService.CardIn[] NewCards, string CardHolderExternalID, int CardHolderInternalID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/AddCardsWithoutCardHolder", ReplyAction="http://ICASA.WebServices/IMutationService/AddCardsWithoutCardHolderResponse")]
-        System.Threading.Tasks.Task<IcasaMutationService.AddItemsResult> AddCardsWithoutCardHolderAsync(System.Collections.Generic.List<IcasaMutationService.CardIn> NewCards, string DebtorExternalID);
+        IcasaMutationService.AddItemsResult AddCardsWithoutCardHolder(IcasaMutationService.CardIn[] NewCards, string DebtorExternalID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/AddCardsWithoutCardHolder", ReplyAction="http://ICASA.WebServices/IMutationService/AddCardsWithoutCardHolderResponse")]
+        System.Threading.Tasks.Task<IcasaMutationService.AddItemsResult> AddCardsWithoutCardHolderAsync(IcasaMutationService.CardIn[] NewCards, string DebtorExternalID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/ChangeDebtor", ReplyAction="http://ICASA.WebServices/IMutationService/ChangeDebtorResponse")]
+        IcasaMutationService.OperationResult ChangeDebtor(string DebtorExternalID, int DebtorInternalID, int CardSequenceNr, IcasaMutationService.DebtorChange ChangedDebtor);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/ChangeDebtor", ReplyAction="http://ICASA.WebServices/IMutationService/ChangeDebtorResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.OperationResult> ChangeDebtorAsync(string DebtorExternalID, int DebtorInternalID, int CardSequenceNr, IcasaMutationService.DebtorChange ChangedDebtor);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/ChangeCardHolder", ReplyAction="http://ICASA.WebServices/IMutationService/ChangeCardHolderResponse")]
+        IcasaMutationService.OperationResult ChangeCardHolder(string CardHolderExternalID, int CardHolderInternalID, int CardSequenceNr, IcasaMutationService.CardHolderChange ChangedCardHolder);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/ChangeCardHolder", ReplyAction="http://ICASA.WebServices/IMutationService/ChangeCardHolderResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.OperationResult> ChangeCardHolderAsync(string CardHolderExternalID, int CardHolderInternalID, int CardSequenceNr, IcasaMutationService.CardHolderChange ChangedCardHolder);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/ChangeCard", ReplyAction="http://ICASA.WebServices/IMutationService/ChangeCardResponse")]
+        IcasaMutationService.OperationResult ChangeCard(int CardSequenceNr, IcasaMutationService.CardChange ChangedCard);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/ChangeCard", ReplyAction="http://ICASA.WebServices/IMutationService/ChangeCardResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.OperationResult> ChangeCardAsync(int CardSequenceNr, IcasaMutationService.CardChange ChangedCard);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/MergeDebtors", ReplyAction="http://ICASA.WebServices/IMutationService/MergeDebtorsResponse")]
-        System.Threading.Tasks.Task<IcasaMutationService.OperationResult> MergeDebtorsAsync(string DebtorExternalID, System.Nullable<int> DebtorInternalID, System.Collections.Generic.List<string> MergeExternalDebtorIDs, System.Collections.Generic.List<int> MergeInternalDebtorIDs, System.Collections.Generic.List<uint> MergeDebtorsViaCardSequenceNrs);
+        IcasaMutationService.OperationResult MergeDebtors(string DebtorExternalID, System.Nullable<int> DebtorInternalID, string[] MergeExternalDebtorIDs, int[] MergeInternalDebtorIDs, uint[] MergeDebtorsViaCardSequenceNrs);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/MergeDebtors", ReplyAction="http://ICASA.WebServices/IMutationService/MergeDebtorsResponse")]
+        System.Threading.Tasks.Task<IcasaMutationService.OperationResult> MergeDebtorsAsync(string DebtorExternalID, System.Nullable<int> DebtorInternalID, string[] MergeExternalDebtorIDs, int[] MergeInternalDebtorIDs, uint[] MergeDebtorsViaCardSequenceNrs);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/BlockCard", ReplyAction="http://ICASA.WebServices/IMutationService/BlockCardResponse")]
+        IcasaMutationService.OperationResult BlockCard(int CardSequenceNr, IcasaMutationService.BlockReason Reason, string AdditionalReason, string Notes);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/BlockCard", ReplyAction="http://ICASA.WebServices/IMutationService/BlockCardResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.OperationResult> BlockCardAsync(int CardSequenceNr, IcasaMutationService.BlockReason Reason, string AdditionalReason, string Notes);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/DeblockCard", ReplyAction="http://ICASA.WebServices/IMutationService/DeblockCardResponse")]
+        IcasaMutationService.OperationResult DeblockCard(int CardSequenceNr, string Notes);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/DeblockCard", ReplyAction="http://ICASA.WebServices/IMutationService/DeblockCardResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.OperationResult> DeblockCardAsync(int CardSequenceNr, string Notes);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/BlockDebtor", ReplyAction="http://ICASA.WebServices/IMutationService/BlockDebtorResponse")]
+        IcasaMutationService.OperationResult BlockDebtor(string DebtorExternalID, string Notes);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/BlockDebtor", ReplyAction="http://ICASA.WebServices/IMutationService/BlockDebtorResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.OperationResult> BlockDebtorAsync(string DebtorExternalID, string Notes);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/DeblockDebtor", ReplyAction="http://ICASA.WebServices/IMutationService/DeblockDebtorResponse")]
+        IcasaMutationService.OperationResult DeblockDebtor(string DebtorExternalID, string Notes);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/DeblockDebtor", ReplyAction="http://ICASA.WebServices/IMutationService/DeblockDebtorResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.OperationResult> DeblockDebtorAsync(string DebtorExternalID, string Notes);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetDebtors", ReplyAction="http://ICASA.WebServices/IMutationService/GetDebtorsResponse")]
+        IcasaMutationService.DebtorRequestResult GetDebtors(IcasaMutationService.DebtorFilter SearchTerms, bool FillRecursive);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetDebtors", ReplyAction="http://ICASA.WebServices/IMutationService/GetDebtorsResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.DebtorRequestResult> GetDebtorsAsync(IcasaMutationService.DebtorFilter SearchTerms, bool FillRecursive);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetCardHolders", ReplyAction="http://ICASA.WebServices/IMutationService/GetCardHoldersResponse")]
+        IcasaMutationService.CardHolderRequestResult GetCardHolders(IcasaMutationService.CardHolderFilter SearchTerms, bool FillRecursive);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetCardHolders", ReplyAction="http://ICASA.WebServices/IMutationService/GetCardHoldersResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.CardHolderRequestResult> GetCardHoldersAsync(IcasaMutationService.CardHolderFilter SearchTerms, bool FillRecursive);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetCards", ReplyAction="http://ICASA.WebServices/IMutationService/GetCardsResponse")]
+        IcasaMutationService.CardRequestResult GetCards(IcasaMutationService.CardFilter SearchTerms);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetCards", ReplyAction="http://ICASA.WebServices/IMutationService/GetCardsResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.CardRequestResult> GetCardsAsync(IcasaMutationService.CardFilter SearchTerms);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetStores", ReplyAction="http://ICASA.WebServices/IMutationService/GetStoresResponse")]
+        IcasaMutationService.StoreRequestResult GetStores(IcasaMutationService.StoreFilter SearchTerms, bool IncludeDynamicFields);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetStores", ReplyAction="http://ICASA.WebServices/IMutationService/GetStoresResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.StoreRequestResult> GetStoresAsync(IcasaMutationService.StoreFilter SearchTerms, bool IncludeDynamicFields);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetTerminals", ReplyAction="http://ICASA.WebServices/IMutationService/GetTerminalsResponse")]
+        IcasaMutationService.TerminalRequestResult GetTerminals();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetTerminals", ReplyAction="http://ICASA.WebServices/IMutationService/GetTerminalsResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.TerminalRequestResult> GetTerminalsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetCompanies", ReplyAction="http://ICASA.WebServices/IMutationService/GetCompaniesResponse")]
+        IcasaMutationService.CompanyRequestResult GetCompanies(IcasaMutationService.CompanyFilter SearchTerms);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetCompanies", ReplyAction="http://ICASA.WebServices/IMutationService/GetCompaniesResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.CompanyRequestResult> GetCompaniesAsync(IcasaMutationService.CompanyFilter SearchTerms);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetCardIssuers", ReplyAction="http://ICASA.WebServices/IMutationService/GetCardIssuersResponse")]
+        IcasaMutationService.CardIssuerRequestResult GetCardIssuers();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetCardIssuers", ReplyAction="http://ICASA.WebServices/IMutationService/GetCardIssuersResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.CardIssuerRequestResult> GetCardIssuersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetEmployees", ReplyAction="http://ICASA.WebServices/IMutationService/GetEmployeesResponse")]
+        IcasaMutationService.EmployeeRequestResult GetEmployees();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetEmployees", ReplyAction="http://ICASA.WebServices/IMutationService/GetEmployeesResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.EmployeeRequestResult> GetEmployeesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetProductSets", ReplyAction="http://ICASA.WebServices/IMutationService/GetProductSetsResponse")]
+        IcasaMutationService.ProductSetRequestResult GetProductSets();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetProductSets", ReplyAction="http://ICASA.WebServices/IMutationService/GetProductSetsResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.ProductSetRequestResult> GetProductSetsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetCreditLimitSets", ReplyAction="http://ICASA.WebServices/IMutationService/GetCreditLimitSetsResponse")]
+        IcasaMutationService.CreditLimitSetRequestResult GetCreditLimitSets();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetCreditLimitSets", ReplyAction="http://ICASA.WebServices/IMutationService/GetCreditLimitSetsResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.CreditLimitSetRequestResult> GetCreditLimitSetsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetStoreClusters", ReplyAction="http://ICASA.WebServices/IMutationService/GetStoreClustersResponse")]
+        IcasaMutationService.StoreClusterRequestResult GetStoreClusters();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetStoreClusters", ReplyAction="http://ICASA.WebServices/IMutationService/GetStoreClustersResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.StoreClusterRequestResult> GetStoreClustersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetCardLayouts", ReplyAction="http://ICASA.WebServices/IMutationService/GetCardLayoutsResponse")]
+        IcasaMutationService.CardLayoutRequestResult GetCardLayouts();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetCardLayouts", ReplyAction="http://ICASA.WebServices/IMutationService/GetCardLayoutsResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.CardLayoutRequestResult> GetCardLayoutsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetAllChangedEntitiesSince", ReplyAction="http://ICASA.WebServices/IMutationService/GetAllChangedEntitiesSinceResponse")]
-        System.Threading.Tasks.Task<IcasaMutationService.GeneralDataRequestResult> GetAllChangedEntitiesSinceAsync(System.DateTime MutationDate, System.Collections.Generic.List<IcasaMutationService.EntityType> IncludeTypes);
+        IcasaMutationService.GeneralDataRequestResult GetAllChangedEntitiesSince(System.DateTime MutationDate, IcasaMutationService.EntityType[] IncludeTypes);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetAllChangedEntitiesSince", ReplyAction="http://ICASA.WebServices/IMutationService/GetAllChangedEntitiesSinceResponse")]
+        System.Threading.Tasks.Task<IcasaMutationService.GeneralDataRequestResult> GetAllChangedEntitiesSinceAsync(System.DateTime MutationDate, IcasaMutationService.EntityType[] IncludeTypes);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetReservedCardNumberStatus", ReplyAction="http://ICASA.WebServices/IMutationService/GetReservedCardNumberStatusResponse")]
+        IcasaMutationService.ReserverdCardNumberStatusResult GetReservedCardNumberStatus();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/GetReservedCardNumberStatus", ReplyAction="http://ICASA.WebServices/IMutationService/GetReservedCardNumberStatusResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.ReserverdCardNumberStatusResult> GetReservedCardNumberStatusAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/IncreaseOverallLimit", ReplyAction="http://ICASA.WebServices/IMutationService/IncreaseOverallLimitResponse")]
+        IcasaMutationService.OperationResult IncreaseOverallLimit(string DebtorExternalID, System.Nullable<int> DebtorInternalID, int LimitIncrement);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/IncreaseOverallLimit", ReplyAction="http://ICASA.WebServices/IMutationService/IncreaseOverallLimitResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.OperationResult> IncreaseOverallLimitAsync(string DebtorExternalID, System.Nullable<int> DebtorInternalID, int LimitIncrement);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/DecreaseOverallLimit", ReplyAction="http://ICASA.WebServices/IMutationService/DecreaseOverallLimitResponse")]
+        IcasaMutationService.OperationResult DecreaseOverallLimit(string DebtorExternalID, System.Nullable<int> DebtorInternalID, int LimitIncrement);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ICASA.WebServices/IMutationService/DecreaseOverallLimit", ReplyAction="http://ICASA.WebServices/IMutationService/DecreaseOverallLimitResponse")]
         System.Threading.Tasks.Task<IcasaMutationService.OperationResult> DecreaseOverallLimitAsync(string DebtorExternalID, System.Nullable<int> DebtorInternalID, int LimitIncrement);
@@ -7686,29 +7779,59 @@ namespace IcasaMutationService
         {
         }
         
+        public string GetVersion()
+        {
+            return base.Channel.GetVersion();
+        }
+        
         public System.Threading.Tasks.Task<string> GetVersionAsync()
         {
             return base.Channel.GetVersionAsync();
         }
         
-        public System.Threading.Tasks.Task<IcasaMutationService.AddItemsResult> AddDebtorsAsync(System.Collections.Generic.List<IcasaMutationService.DebtorIn> NewDebtors)
+        public IcasaMutationService.AddItemsResult AddDebtors(IcasaMutationService.DebtorIn[] NewDebtors)
+        {
+            return base.Channel.AddDebtors(NewDebtors);
+        }
+        
+        public System.Threading.Tasks.Task<IcasaMutationService.AddItemsResult> AddDebtorsAsync(IcasaMutationService.DebtorIn[] NewDebtors)
         {
             return base.Channel.AddDebtorsAsync(NewDebtors);
         }
         
-        public System.Threading.Tasks.Task<IcasaMutationService.AddItemsResult> AddCardHoldersAsync(System.Collections.Generic.List<IcasaMutationService.CardHolderIn> NewCardHolders, string DebtorExternalID)
+        public IcasaMutationService.AddItemsResult AddCardHolders(IcasaMutationService.CardHolderIn[] NewCardHolders, string DebtorExternalID)
+        {
+            return base.Channel.AddCardHolders(NewCardHolders, DebtorExternalID);
+        }
+        
+        public System.Threading.Tasks.Task<IcasaMutationService.AddItemsResult> AddCardHoldersAsync(IcasaMutationService.CardHolderIn[] NewCardHolders, string DebtorExternalID)
         {
             return base.Channel.AddCardHoldersAsync(NewCardHolders, DebtorExternalID);
         }
         
-        public System.Threading.Tasks.Task<IcasaMutationService.OperationResult> AddCardsAsync(System.Collections.Generic.List<IcasaMutationService.CardIn> NewCards, string CardHolderExternalID, int CardHolderInternalID)
+        public IcasaMutationService.OperationResult AddCards(IcasaMutationService.CardIn[] NewCards, string CardHolderExternalID, int CardHolderInternalID)
+        {
+            return base.Channel.AddCards(NewCards, CardHolderExternalID, CardHolderInternalID);
+        }
+        
+        public System.Threading.Tasks.Task<IcasaMutationService.OperationResult> AddCardsAsync(IcasaMutationService.CardIn[] NewCards, string CardHolderExternalID, int CardHolderInternalID)
         {
             return base.Channel.AddCardsAsync(NewCards, CardHolderExternalID, CardHolderInternalID);
         }
         
-        public System.Threading.Tasks.Task<IcasaMutationService.AddItemsResult> AddCardsWithoutCardHolderAsync(System.Collections.Generic.List<IcasaMutationService.CardIn> NewCards, string DebtorExternalID)
+        public IcasaMutationService.AddItemsResult AddCardsWithoutCardHolder(IcasaMutationService.CardIn[] NewCards, string DebtorExternalID)
+        {
+            return base.Channel.AddCardsWithoutCardHolder(NewCards, DebtorExternalID);
+        }
+        
+        public System.Threading.Tasks.Task<IcasaMutationService.AddItemsResult> AddCardsWithoutCardHolderAsync(IcasaMutationService.CardIn[] NewCards, string DebtorExternalID)
         {
             return base.Channel.AddCardsWithoutCardHolderAsync(NewCards, DebtorExternalID);
+        }
+        
+        public IcasaMutationService.OperationResult ChangeDebtor(string DebtorExternalID, int DebtorInternalID, int CardSequenceNr, IcasaMutationService.DebtorChange ChangedDebtor)
+        {
+            return base.Channel.ChangeDebtor(DebtorExternalID, DebtorInternalID, CardSequenceNr, ChangedDebtor);
         }
         
         public System.Threading.Tasks.Task<IcasaMutationService.OperationResult> ChangeDebtorAsync(string DebtorExternalID, int DebtorInternalID, int CardSequenceNr, IcasaMutationService.DebtorChange ChangedDebtor)
@@ -7716,9 +7839,19 @@ namespace IcasaMutationService
             return base.Channel.ChangeDebtorAsync(DebtorExternalID, DebtorInternalID, CardSequenceNr, ChangedDebtor);
         }
         
+        public IcasaMutationService.OperationResult ChangeCardHolder(string CardHolderExternalID, int CardHolderInternalID, int CardSequenceNr, IcasaMutationService.CardHolderChange ChangedCardHolder)
+        {
+            return base.Channel.ChangeCardHolder(CardHolderExternalID, CardHolderInternalID, CardSequenceNr, ChangedCardHolder);
+        }
+        
         public System.Threading.Tasks.Task<IcasaMutationService.OperationResult> ChangeCardHolderAsync(string CardHolderExternalID, int CardHolderInternalID, int CardSequenceNr, IcasaMutationService.CardHolderChange ChangedCardHolder)
         {
             return base.Channel.ChangeCardHolderAsync(CardHolderExternalID, CardHolderInternalID, CardSequenceNr, ChangedCardHolder);
+        }
+        
+        public IcasaMutationService.OperationResult ChangeCard(int CardSequenceNr, IcasaMutationService.CardChange ChangedCard)
+        {
+            return base.Channel.ChangeCard(CardSequenceNr, ChangedCard);
         }
         
         public System.Threading.Tasks.Task<IcasaMutationService.OperationResult> ChangeCardAsync(int CardSequenceNr, IcasaMutationService.CardChange ChangedCard)
@@ -7726,9 +7859,19 @@ namespace IcasaMutationService
             return base.Channel.ChangeCardAsync(CardSequenceNr, ChangedCard);
         }
         
-        public System.Threading.Tasks.Task<IcasaMutationService.OperationResult> MergeDebtorsAsync(string DebtorExternalID, System.Nullable<int> DebtorInternalID, System.Collections.Generic.List<string> MergeExternalDebtorIDs, System.Collections.Generic.List<int> MergeInternalDebtorIDs, System.Collections.Generic.List<uint> MergeDebtorsViaCardSequenceNrs)
+        public IcasaMutationService.OperationResult MergeDebtors(string DebtorExternalID, System.Nullable<int> DebtorInternalID, string[] MergeExternalDebtorIDs, int[] MergeInternalDebtorIDs, uint[] MergeDebtorsViaCardSequenceNrs)
+        {
+            return base.Channel.MergeDebtors(DebtorExternalID, DebtorInternalID, MergeExternalDebtorIDs, MergeInternalDebtorIDs, MergeDebtorsViaCardSequenceNrs);
+        }
+        
+        public System.Threading.Tasks.Task<IcasaMutationService.OperationResult> MergeDebtorsAsync(string DebtorExternalID, System.Nullable<int> DebtorInternalID, string[] MergeExternalDebtorIDs, int[] MergeInternalDebtorIDs, uint[] MergeDebtorsViaCardSequenceNrs)
         {
             return base.Channel.MergeDebtorsAsync(DebtorExternalID, DebtorInternalID, MergeExternalDebtorIDs, MergeInternalDebtorIDs, MergeDebtorsViaCardSequenceNrs);
+        }
+        
+        public IcasaMutationService.OperationResult BlockCard(int CardSequenceNr, IcasaMutationService.BlockReason Reason, string AdditionalReason, string Notes)
+        {
+            return base.Channel.BlockCard(CardSequenceNr, Reason, AdditionalReason, Notes);
         }
         
         public System.Threading.Tasks.Task<IcasaMutationService.OperationResult> BlockCardAsync(int CardSequenceNr, IcasaMutationService.BlockReason Reason, string AdditionalReason, string Notes)
@@ -7736,9 +7879,19 @@ namespace IcasaMutationService
             return base.Channel.BlockCardAsync(CardSequenceNr, Reason, AdditionalReason, Notes);
         }
         
+        public IcasaMutationService.OperationResult DeblockCard(int CardSequenceNr, string Notes)
+        {
+            return base.Channel.DeblockCard(CardSequenceNr, Notes);
+        }
+        
         public System.Threading.Tasks.Task<IcasaMutationService.OperationResult> DeblockCardAsync(int CardSequenceNr, string Notes)
         {
             return base.Channel.DeblockCardAsync(CardSequenceNr, Notes);
+        }
+        
+        public IcasaMutationService.OperationResult BlockDebtor(string DebtorExternalID, string Notes)
+        {
+            return base.Channel.BlockDebtor(DebtorExternalID, Notes);
         }
         
         public System.Threading.Tasks.Task<IcasaMutationService.OperationResult> BlockDebtorAsync(string DebtorExternalID, string Notes)
@@ -7746,9 +7899,19 @@ namespace IcasaMutationService
             return base.Channel.BlockDebtorAsync(DebtorExternalID, Notes);
         }
         
+        public IcasaMutationService.OperationResult DeblockDebtor(string DebtorExternalID, string Notes)
+        {
+            return base.Channel.DeblockDebtor(DebtorExternalID, Notes);
+        }
+        
         public System.Threading.Tasks.Task<IcasaMutationService.OperationResult> DeblockDebtorAsync(string DebtorExternalID, string Notes)
         {
             return base.Channel.DeblockDebtorAsync(DebtorExternalID, Notes);
+        }
+        
+        public IcasaMutationService.DebtorRequestResult GetDebtors(IcasaMutationService.DebtorFilter SearchTerms, bool FillRecursive)
+        {
+            return base.Channel.GetDebtors(SearchTerms, FillRecursive);
         }
         
         public System.Threading.Tasks.Task<IcasaMutationService.DebtorRequestResult> GetDebtorsAsync(IcasaMutationService.DebtorFilter SearchTerms, bool FillRecursive)
@@ -7756,9 +7919,19 @@ namespace IcasaMutationService
             return base.Channel.GetDebtorsAsync(SearchTerms, FillRecursive);
         }
         
+        public IcasaMutationService.CardHolderRequestResult GetCardHolders(IcasaMutationService.CardHolderFilter SearchTerms, bool FillRecursive)
+        {
+            return base.Channel.GetCardHolders(SearchTerms, FillRecursive);
+        }
+        
         public System.Threading.Tasks.Task<IcasaMutationService.CardHolderRequestResult> GetCardHoldersAsync(IcasaMutationService.CardHolderFilter SearchTerms, bool FillRecursive)
         {
             return base.Channel.GetCardHoldersAsync(SearchTerms, FillRecursive);
+        }
+        
+        public IcasaMutationService.CardRequestResult GetCards(IcasaMutationService.CardFilter SearchTerms)
+        {
+            return base.Channel.GetCards(SearchTerms);
         }
         
         public System.Threading.Tasks.Task<IcasaMutationService.CardRequestResult> GetCardsAsync(IcasaMutationService.CardFilter SearchTerms)
@@ -7766,9 +7939,19 @@ namespace IcasaMutationService
             return base.Channel.GetCardsAsync(SearchTerms);
         }
         
+        public IcasaMutationService.StoreRequestResult GetStores(IcasaMutationService.StoreFilter SearchTerms, bool IncludeDynamicFields)
+        {
+            return base.Channel.GetStores(SearchTerms, IncludeDynamicFields);
+        }
+        
         public System.Threading.Tasks.Task<IcasaMutationService.StoreRequestResult> GetStoresAsync(IcasaMutationService.StoreFilter SearchTerms, bool IncludeDynamicFields)
         {
             return base.Channel.GetStoresAsync(SearchTerms, IncludeDynamicFields);
+        }
+        
+        public IcasaMutationService.TerminalRequestResult GetTerminals()
+        {
+            return base.Channel.GetTerminals();
         }
         
         public System.Threading.Tasks.Task<IcasaMutationService.TerminalRequestResult> GetTerminalsAsync()
@@ -7776,9 +7959,19 @@ namespace IcasaMutationService
             return base.Channel.GetTerminalsAsync();
         }
         
+        public IcasaMutationService.CompanyRequestResult GetCompanies(IcasaMutationService.CompanyFilter SearchTerms)
+        {
+            return base.Channel.GetCompanies(SearchTerms);
+        }
+        
         public System.Threading.Tasks.Task<IcasaMutationService.CompanyRequestResult> GetCompaniesAsync(IcasaMutationService.CompanyFilter SearchTerms)
         {
             return base.Channel.GetCompaniesAsync(SearchTerms);
+        }
+        
+        public IcasaMutationService.CardIssuerRequestResult GetCardIssuers()
+        {
+            return base.Channel.GetCardIssuers();
         }
         
         public System.Threading.Tasks.Task<IcasaMutationService.CardIssuerRequestResult> GetCardIssuersAsync()
@@ -7786,9 +7979,19 @@ namespace IcasaMutationService
             return base.Channel.GetCardIssuersAsync();
         }
         
+        public IcasaMutationService.EmployeeRequestResult GetEmployees()
+        {
+            return base.Channel.GetEmployees();
+        }
+        
         public System.Threading.Tasks.Task<IcasaMutationService.EmployeeRequestResult> GetEmployeesAsync()
         {
             return base.Channel.GetEmployeesAsync();
+        }
+        
+        public IcasaMutationService.ProductSetRequestResult GetProductSets()
+        {
+            return base.Channel.GetProductSets();
         }
         
         public System.Threading.Tasks.Task<IcasaMutationService.ProductSetRequestResult> GetProductSetsAsync()
@@ -7796,9 +7999,19 @@ namespace IcasaMutationService
             return base.Channel.GetProductSetsAsync();
         }
         
+        public IcasaMutationService.CreditLimitSetRequestResult GetCreditLimitSets()
+        {
+            return base.Channel.GetCreditLimitSets();
+        }
+        
         public System.Threading.Tasks.Task<IcasaMutationService.CreditLimitSetRequestResult> GetCreditLimitSetsAsync()
         {
             return base.Channel.GetCreditLimitSetsAsync();
+        }
+        
+        public IcasaMutationService.StoreClusterRequestResult GetStoreClusters()
+        {
+            return base.Channel.GetStoreClusters();
         }
         
         public System.Threading.Tasks.Task<IcasaMutationService.StoreClusterRequestResult> GetStoreClustersAsync()
@@ -7806,14 +8019,29 @@ namespace IcasaMutationService
             return base.Channel.GetStoreClustersAsync();
         }
         
+        public IcasaMutationService.CardLayoutRequestResult GetCardLayouts()
+        {
+            return base.Channel.GetCardLayouts();
+        }
+        
         public System.Threading.Tasks.Task<IcasaMutationService.CardLayoutRequestResult> GetCardLayoutsAsync()
         {
             return base.Channel.GetCardLayoutsAsync();
         }
         
-        public System.Threading.Tasks.Task<IcasaMutationService.GeneralDataRequestResult> GetAllChangedEntitiesSinceAsync(System.DateTime MutationDate, System.Collections.Generic.List<IcasaMutationService.EntityType> IncludeTypes)
+        public IcasaMutationService.GeneralDataRequestResult GetAllChangedEntitiesSince(System.DateTime MutationDate, IcasaMutationService.EntityType[] IncludeTypes)
+        {
+            return base.Channel.GetAllChangedEntitiesSince(MutationDate, IncludeTypes);
+        }
+        
+        public System.Threading.Tasks.Task<IcasaMutationService.GeneralDataRequestResult> GetAllChangedEntitiesSinceAsync(System.DateTime MutationDate, IcasaMutationService.EntityType[] IncludeTypes)
         {
             return base.Channel.GetAllChangedEntitiesSinceAsync(MutationDate, IncludeTypes);
+        }
+        
+        public IcasaMutationService.ReserverdCardNumberStatusResult GetReservedCardNumberStatus()
+        {
+            return base.Channel.GetReservedCardNumberStatus();
         }
         
         public System.Threading.Tasks.Task<IcasaMutationService.ReserverdCardNumberStatusResult> GetReservedCardNumberStatusAsync()
@@ -7821,9 +8049,19 @@ namespace IcasaMutationService
             return base.Channel.GetReservedCardNumberStatusAsync();
         }
         
+        public IcasaMutationService.OperationResult IncreaseOverallLimit(string DebtorExternalID, System.Nullable<int> DebtorInternalID, int LimitIncrement)
+        {
+            return base.Channel.IncreaseOverallLimit(DebtorExternalID, DebtorInternalID, LimitIncrement);
+        }
+        
         public System.Threading.Tasks.Task<IcasaMutationService.OperationResult> IncreaseOverallLimitAsync(string DebtorExternalID, System.Nullable<int> DebtorInternalID, int LimitIncrement)
         {
             return base.Channel.IncreaseOverallLimitAsync(DebtorExternalID, DebtorInternalID, LimitIncrement);
+        }
+        
+        public IcasaMutationService.OperationResult DecreaseOverallLimit(string DebtorExternalID, System.Nullable<int> DebtorInternalID, int LimitIncrement)
+        {
+            return base.Channel.DecreaseOverallLimit(DebtorExternalID, DebtorInternalID, LimitIncrement);
         }
         
         public System.Threading.Tasks.Task<IcasaMutationService.OperationResult> DecreaseOverallLimitAsync(string DebtorExternalID, System.Nullable<int> DebtorInternalID, int LimitIncrement)
