@@ -8,7 +8,7 @@ namespace IcasaMutationServiceData
 {
     public class IcasaMutationServiceData
     {
-        private static readonly log4net.ILog _log4net = Log4netLogger.Log4netLogger.GetLog4netInstance(MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly log4net.ILog log4net = Log4netLogger.Log4netLogger.GetLog4netInstance(MethodBase.GetCurrentMethod().DeclaringType);
 
         #region private static readonly string EndpointAddress
         /// <summary>
@@ -80,7 +80,7 @@ namespace IcasaMutationServiceData
             }
             catch (Exception e)
             {
-                _log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
+                log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
             }
             return null;
         }
@@ -113,7 +113,7 @@ namespace IcasaMutationServiceData
             }
             catch (Exception e)
             {
-                _log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
+                log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
             }
             return null;
         }
@@ -147,7 +147,7 @@ namespace IcasaMutationServiceData
             }
             catch (Exception e)
             {
-                _log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
+                log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
             }
             return null;
         }
@@ -184,7 +184,7 @@ namespace IcasaMutationServiceData
             }
             catch (Exception e)
             {
-                _log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
+                log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
             }
             return null;
         }
@@ -222,7 +222,7 @@ namespace IcasaMutationServiceData
         //    }
         //    catch (Exception e)
         //    {
-        //        _log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
+        //        log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
         //    }
         //    return null;
         //}
@@ -248,13 +248,13 @@ namespace IcasaMutationServiceData
             }
             catch (Exception e)
             {
-                _log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
+                log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
                 if (null != e.InnerException)
                 {
-                    _log4net.Error(string.Format("{0}, {1}", e.InnerException.Message, e.InnerException.StackTrace), e.InnerException);
+                    log4net.Error(string.Format("{0}, {1}", e.InnerException.Message, e.InnerException.StackTrace), e.InnerException);
                     if (null != e.InnerException.InnerException)
                     {
-                        _log4net.Error(string.Format("{0}, {1}", e.InnerException.InnerException.Message, e.InnerException.InnerException.StackTrace), e.InnerException.InnerException);
+                        log4net.Error(string.Format("{0}, {1}", e.InnerException.InnerException.Message, e.InnerException.InnerException.StackTrace), e.InnerException.InnerException);
                     }
                 }
             }
@@ -268,10 +268,10 @@ namespace IcasaMutationServiceData
             //}
             //catch (Exception e)
             //{
-            //    _log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
+            //    log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
             //    if (null != e.InnerException)
             //    {
-            //        _log4net.Error(string.Format("{0}, {1}", e.InnerException.Message, e.InnerException.StackTrace), e.InnerException);
+            //        log4net.Error(string.Format("{0}, {1}", e.InnerException.Message, e.InnerException.StackTrace), e.InnerException);
             //    }
             //}
 
@@ -288,7 +288,7 @@ namespace IcasaMutationServiceData
             //}
             //catch (Exception e)
             //{
-            //    _log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
+            //    log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
             //}
         }
         #endregion
