@@ -13,7 +13,7 @@
       "*, IcasaMutationService"
     ],
     "sync": true,
-    "targetFramework": "netstandard2.0",
+    "targetFramework": "netstandard2.1",
     "typeReuseMode": "None"
   }
 }
