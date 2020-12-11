@@ -8,7 +8,7 @@ namespace IcasaMutationServiceData
 {
     public class IcasaMutationServiceData
     {
-        private static readonly log4net.ILog log4net = Log4netLogger.Log4netLogger.GetLog4netInstance(MethodBase.GetCurrentMethod().DeclaringType);
+        private readonly log4net.ILog log4net = Log4netLogger.Log4netLogger.GetLog4netInstance(MethodBase.GetCurrentMethod().DeclaringType);
 
         #region private static readonly string EndpointAddress
         /// <summary>
