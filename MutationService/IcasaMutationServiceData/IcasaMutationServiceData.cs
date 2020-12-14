@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
@@ -8,7 +8,7 @@ namespace IcasaMutationServiceData
 {
     public class IcasaMutationServiceData
     {
-        private readonly log4net.ILog log4net = Log4netLogger.Log4netLogger.GetLog4netInstance(MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly log4net.ILog Log4net = Log4netLogger.Log4netLogger.GetLog4netInstance(MethodBase.GetCurrentMethod().DeclaringType);
 
         #region private static readonly string EndpointAddress
         /// <summary>
@@ -80,7 +80,7 @@ namespace IcasaMutationServiceData
             }
             catch (Exception e)
             {
-                log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
+                Log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
             }
             return null;
         }
@@ -96,7 +96,7 @@ namespace IcasaMutationServiceData
         {
             try
             {
-                WSHttpBinding wSHttpBinding = new WSHttpBinding();
+                var wSHttpBinding = new WSHttpBinding();
                 wSHttpBinding.Security.Mode = SecurityMode.Transport;
                 wSHttpBinding.Security.Transport.ClientCredentialType = HttpClientCredentialType.Basic;
                 //wSHttpBinding.EnvelopeVersion = EnvelopeVersion.Soap11;
@@ -113,7 +113,7 @@ namespace IcasaMutationServiceData
             }
             catch (Exception e)
             {
-                log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
+                Log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
             }
             return null;
         }
@@ -124,14 +124,14 @@ namespace IcasaMutationServiceData
         {
             try
             {
-                CustomBinding customBinding = new CustomBinding();
+                var customBinding = new CustomBinding();
                 TransportSecurityBindingElement userNameOverTransportSecurityBindingElement = SecurityBindingElement.CreateUserNameOverTransportBindingElement();
                 userNameOverTransportSecurityBindingElement.MessageSecurityVersion = System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10;
                 userNameOverTransportSecurityBindingElement.IncludeTimestamp = false;
                 customBinding.Elements.Add(userNameOverTransportSecurityBindingElement);
-                TextMessageEncodingBindingElement textBindingElement = new TextMessageEncodingBindingElement();
+                var textBindingElement = new TextMessageEncodingBindingElement();
                 customBinding.Elements.Add(textBindingElement);
-                HttpsTransportBindingElement httpsBindingElement = new HttpsTransportBindingElement
+                var httpsBindingElement = new HttpsTransportBindingElement
                 {
                     AllowCookies = true,
                     MaxBufferSize = int.MaxValue,
@@ -147,7 +147,7 @@ namespace IcasaMutationServiceData
             }
             catch (Exception e)
             {
-                log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
+                Log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
             }
             return null;
         }
@@ -169,22 +169,22 @@ namespace IcasaMutationServiceData
                 BasicHttpBinding basicHttpBinding = GetBasicHttpBinding();
                 WSHttpBinding wSHttpBinding = GetWSHttpBinding();
                 CustomBinding customBinding = GetCustomBinding();
-                EndpointAddress endpointAddress = new EndpointAddress(EndpointAddress);
-                IcasaMutationService.MutationServiceClient mutationServiceClient = new IcasaMutationService.MutationServiceClient(wSHttpBinding, endpointAddress);
+                var endpointAddress = new EndpointAddress(EndpointAddress);
+                var mutationServiceClient = new IcasaMutationService.MutationServiceClient(wSHttpBinding, endpointAddress);
                 mutationServiceClient.Endpoint.Address = endpointAddress;
                 mutationServiceClient.ClientCredentials.UserName.UserName = MutationServiceClientCredentialsUserName;
                 mutationServiceClient.ClientCredentials.UserName.Password = MutationServiceClientCredentialsPassword;
                 mutationServiceClient.Endpoint.EndpointBehaviors.Add(new NetAppCommon.Logging.SoapEndpointBehavior());
-                OperationContextScope operationContextScope = new OperationContextScope(mutationServiceClient.InnerChannel);
-                HttpRequestMessageProperty httpRequestMessageProperty = new HttpRequestMessageProperty();
-                string authenticationHeaderToBase64String = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", MutationServiceClientCredentialsUserName, MutationServiceClientCredentialsPassword)));
+                var operationContextScope = new OperationContextScope(mutationServiceClient.InnerChannel);
+                var httpRequestMessageProperty = new HttpRequestMessageProperty();
+                var authenticationHeaderToBase64String = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", MutationServiceClientCredentialsUserName, MutationServiceClientCredentialsPassword)));
                 httpRequestMessageProperty.Headers.Add("Authorization", $"Basic { authenticationHeaderToBase64String }");
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = httpRequestMessageProperty;
                 return mutationServiceClient;
             }
             catch (Exception e)
             {
-                log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
+                Log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
             }
             return null;
         }
@@ -248,13 +248,13 @@ namespace IcasaMutationServiceData
             }
             catch (Exception e)
             {
-                log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
+                Log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
                 if (null != e.InnerException)
                 {
-                    log4net.Error(string.Format("{0}, {1}", e.InnerException.Message, e.InnerException.StackTrace), e.InnerException);
+                    Log4net.Error(string.Format("{0}, {1}", e.InnerException.Message, e.InnerException.StackTrace), e.InnerException);
                     if (null != e.InnerException.InnerException)
                     {
-                        log4net.Error(string.Format("{0}, {1}", e.InnerException.InnerException.Message, e.InnerException.InnerException.StackTrace), e.InnerException.InnerException);
+                        Log4net.Error(string.Format("{0}, {1}", e.InnerException.InnerException.Message, e.InnerException.InnerException.StackTrace), e.InnerException.InnerException);
                     }
                 }
             }
