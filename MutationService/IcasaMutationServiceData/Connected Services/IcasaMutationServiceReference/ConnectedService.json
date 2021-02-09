@@ -3,17 +3,18 @@
   "Version": "15.0.40203.910",
   "ExtendedData": {
     "inputs": [
-      "https://soap.icasa-group.com/MutationServiceIcasa.svc?wsdl"
+      "https://soap.icasa-group.com/wsdl/MutationService.wsdl"
     ],
     "collectionTypes": [
       "System.Array",
       "System.Collections.Generic.Dictionary`2"
     ],
+    "messageContract": true,
     "namespaceMappings": [
-      "*, IcasaMutationServiceN"
+      "*, IcasaMutationServiceReference"
     ],
     "sync": true,
-    "targetFramework": "netstandard2.1",
+    "targetFramework": "netcoreapp3.1",
     "typeReuseMode": "None"
   }
 }

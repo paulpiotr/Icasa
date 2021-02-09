@@ -2,7 +2,44 @@ using System;
 using System.Reflection;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
+
+/* Niescalona zmiana z projektu „IcasaMutationServiceData (netstandard2.1)”
+Przed:
 using System.Threading.Tasks;
+using System.Text;
+using SoapHttpClient;
+Po:
+using System.Text;
+using System.Threading.Tasks;
+*/
+
+/* Niescalona zmiana z projektu „IcasaMutationServiceData (net5.0)”
+Przed:
+using System.Threading.Tasks;
+using System.Text;
+using SoapHttpClient;
+Po:
+using System.Text;
+using System.Threading.Tasks;
+*/
+using System.Text;
+using System.Threading.Tasks;
+/* Niescalona zmiana z projektu „IcasaMutationServiceData (netstandard2.1)”
+Przed:
+using SoapHttpClient.Enums;
+Po:
+using SoapHttpClient;
+using SoapHttpClient.Enums;
+*/
+
+/* Niescalona zmiana z projektu „IcasaMutationServiceData (net5.0)”
+Przed:
+using SoapHttpClient.Enums;
+Po:
+using SoapHttpClient;
+using SoapHttpClient.Enums;
+*/
+
 
 namespace IcasaMutationServiceData
 {
@@ -153,16 +190,16 @@ namespace IcasaMutationServiceData
         }
         #endregion
 
-        #region public static IcasaMutationService.MutationServiceClient IcasaMutationServiceClient()
+        #region public static IcasaMutationServiceReference.MutationServiceClient IcasaMutationServiceClient()
         /// <summary>
         /// Skonfiguruj, autoryzuj i pobierz klienta do serwisu ICASA
         /// Set up, authorize and download the client to the ICASA service
         /// </summary>
         /// <returns>
-        /// Klient serwisu ICASA jako IcasaMutationService.MutationServiceClient
-        /// ICASA client as IcasaMutationService.MutationServiceClient
+        /// Klient serwisu ICASA jako IcasaMutationServiceReference.MutationServiceClient
+        /// ICASA client as IcasaMutationServiceReference.MutationServiceClient
         /// </returns>
-        public static IcasaMutationService.MutationServiceClient GetIcasaMutationServiceClient()
+        public IcasaMutationServiceReference.MutationServiceClient GetIcasaMutationServiceClient()
         {
             try
             {
@@ -170,14 +207,14 @@ namespace IcasaMutationServiceData
                 WSHttpBinding wSHttpBinding = GetWSHttpBinding();
                 CustomBinding customBinding = GetCustomBinding();
                 var endpointAddress = new EndpointAddress(EndpointAddress);
-                var mutationServiceClient = new IcasaMutationService.MutationServiceClient(wSHttpBinding, endpointAddress);
+                var mutationServiceClient = new IcasaMutationServiceReference.MutationServiceClient(wSHttpBinding, endpointAddress);
                 mutationServiceClient.Endpoint.Address = endpointAddress;
                 mutationServiceClient.ClientCredentials.UserName.UserName = MutationServiceClientCredentialsUserName;
                 mutationServiceClient.ClientCredentials.UserName.Password = MutationServiceClientCredentialsPassword;
                 mutationServiceClient.Endpoint.EndpointBehaviors.Add(new NetAppCommon.Logging.SoapEndpointBehavior());
                 var operationContextScope = new OperationContextScope(mutationServiceClient.InnerChannel);
                 var httpRequestMessageProperty = new HttpRequestMessageProperty();
-                var authenticationHeaderToBase64String = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes(string.Format("{0}:{1}", MutationServiceClientCredentialsUserName, MutationServiceClientCredentialsPassword)));
+                var authenticationHeaderToBase64String = Convert.ToBase64String(Encoding.ASCII.GetBytes(string.Format("{0}:{1}", MutationServiceClientCredentialsUserName, MutationServiceClientCredentialsPassword)));
                 httpRequestMessageProperty.Headers.Add("Authorization", $"Basic { authenticationHeaderToBase64String }");
                 OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = httpRequestMessageProperty;
                 return mutationServiceClient;
@@ -190,14 +227,14 @@ namespace IcasaMutationServiceData
         }
         #endregion
 
-        //#region public static IcasaMutationService.MutationServiceClient IcasaMutationServiceClientN()
+        //#region public static IcasaMutationServiceReference.MutationServiceClient IcasaMutationServiceClientN()
         ///// <summary>
         ///// Skonfiguruj, autoryzuj i pobierz klienta do serwisu ICASA
         ///// Set up, authorize and download the client to the ICASA service
         ///// </summary>
         ///// <returns>
-        ///// Klient serwisu ICASA jako IcasaMutationService.MutationServiceClient
-        ///// ICASA client as IcasaMutationService.MutationServiceClient
+        ///// Klient serwisu ICASA jako IcasaMutationServiceReference.MutationServiceClient
+        ///// ICASA client as IcasaMutationServiceReference.MutationServiceClient
         ///// </returns>
         //public static IcasaMutationServiceN.MutationServiceClient GetIcasaMutationServiceClientN()
         //{
@@ -228,22 +265,48 @@ namespace IcasaMutationServiceData
         //}
         //#endregion
 
-        # region public static async Task TestAsync()
-        public static async Task TestAsync()
+        #region public static async Task TestAsync()
+
+        /* Niescalona zmiana z projektu „IcasaMutationServiceData (net5.0)”
+        Przed:
+                public async Task TestAsync()
+        Po:
+                public async Task Test()
+        */
+
+        /* Niescalona zmiana z projektu „IcasaMutationServiceData (netstandard2.1)”
+        Przed:
+                public async Task TestAsync()
+        Po:
+                public async Task Test()
+        */
+        public void Test()
         {
             try
             {
                 Console.WriteLine("Begin");
-                IcasaMutationService.MutationServiceClient mutationServiceClient = GetIcasaMutationServiceClient();
+                IcasaMutationServiceReference.MutationServiceClient mutationServiceClient = GetIcasaMutationServiceClient();
                 if (null != mutationServiceClient)
                 {
-                    //string getVersionAsync = await mutationServiceClient.GetVersionAsync();
-                    //Console.WriteLine(getVersionAsync);
+                    var storesRequest = new IcasaMutationServiceReference.GetStoresRequest();
+                    Task<IcasaMutationServiceReference.GetStoresResponse> stores = mutationServiceClient.GetStoresAsync(storesRequest);
+                    Console.WriteLine(stores.Result.GetStoresResult.OperationSuccess);
+                    Console.WriteLine(stores.Result.GetStoresResult.Data.Length);
+                    foreach (IcasaMutationServiceReference.StoreOut store in stores.Result.GetStoresResult.Data)
+                    {
+                        Console.WriteLine(store.CAIC);
+                    }
 
-                    IcasaMutationService.EmployeeRequestResult emp = await mutationServiceClient.GetEmployeesAsync();
+                    var blockDebtorRequest = new IcasaMutationServiceReference.BlockDebtorRequest
+                    {
+                        DebtorExternalID = "",
+                        Notes = "Notes"
+                    };
+                    Task<IcasaMutationServiceReference.BlockDebtorResponse> blockDebtorResponse = mutationServiceClient.BlockDebtorAsync(blockDebtorRequest);
+                    Console.WriteLine(blockDebtorResponse.Result.BlockDebtorResult.ErrorType);
 
-                    await mutationServiceClient.CloseAsync();
                 }
+
                 Console.WriteLine("End");
             }
             catch (Exception e)
@@ -258,38 +321,6 @@ namespace IcasaMutationServiceData
                     }
                 }
             }
-
-            //try
-            //{
-            //    Console.WriteLine("Begin");
-            //    string getVersionAsync = GetIcasaMutationServiceClientN()?.GetVersion();
-            //    Console.WriteLine(getVersionAsync);
-            //    Console.WriteLine("End");
-            //}
-            //catch (Exception e)
-            //{
-            //    log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
-            //    if (null != e.InnerException)
-            //    {
-            //        log4net.Error(string.Format("{0}, {1}", e.InnerException.Message, e.InnerException.StackTrace), e.InnerException);
-            //    }
-            //}
-
-            //try
-            //{
-            //    Console.WriteLine("Begin");
-            //    DebtorFilter debtorFilter = new DebtorFilter
-            //    {
-            //        IsActive = true
-            //    };
-            //    DebtorRequestResult debtorRequestResult = await GetIcasaMutationServiceClient()?.GetDebtorsAsync(debtorFilter, true);
-            //    Console.WriteLine(debtorRequestResult.Message);
-            //    Console.WriteLine("End");
-            //}
-            //catch (Exception e)
-            //{
-            //    log4net.Error(string.Format("{0}, {1}", e.Message, e.StackTrace), e);
-            //}
         }
         #endregion
     }
